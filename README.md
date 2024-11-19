@@ -1,5 +1,5 @@
 # BackEnd-Development-DataBase String
-https://github.com/gaurdinesh1995/BackEnd-Development.git
+mongodb+srv://dinesh01:<db_password>@nodejs.7vg1f.mongodb.net/
 
 # Before starting the project hit these command and install these package globally in system
    -> npm install -g typescript node
@@ -14,3 +14,4 @@ https://github.com/gaurdinesh1995/BackEnd-Development.git
 1. Use these commmand to setup:
   -> npm init
   -> npm install typescript ts-node express node @types/express @types/node nodemon @types/nodemon
+  -> npm install mongoose @types/mongoose
