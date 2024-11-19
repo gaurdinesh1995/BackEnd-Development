@@ -1,0 +1,21 @@
+{
+  "name": "backend-development",
+  "version": "1.0.0",
+  "description": "https://github.com/gaurdinesh1995/BackEnd-Development.git",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/nodemon": "^1.19.6",
+    "express": "^4.21.1",
+    "node": "^18.20.5",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
