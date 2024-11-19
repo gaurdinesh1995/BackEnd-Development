@@ -11,7 +11,8 @@ mongodb+srv://dinesh01:<db_password>@nodejs.7vg1f.mongodb.net/
 
 #Steps to setiup the project
 
-1. Use these commmand to setup:
+1. Use these commmands to setup the project and install  necessory dependencies:
   -> npm init
   -> npm install typescript ts-node express node @types/express @types/node nodemon @types/nodemon
   -> npm install mongoose @types/mongoose
+  -> npm install body-parser @types/body-parser

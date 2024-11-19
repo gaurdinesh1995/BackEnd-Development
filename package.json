@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/body-parser": "^1.19.5",
     "@types/express": "^5.0.0",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^22.9.0",
     "@types/nodemon": "^1.19.6",
+    "body-parser": "^1.20.3",
     "express": "^4.21.1",
     "mongoose": "^8.8.2",
     "node": "^18.20.5",
