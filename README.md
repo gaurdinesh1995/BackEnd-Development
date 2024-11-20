@@ -16,3 +16,4 @@ mongodb+srv://dinesh01:<db_password>@nodejs.7vg1f.mongodb.net/
   -> npm install typescript ts-node express node @types/express @types/node nodemon @types/nodemon
   -> npm install mongoose @types/mongoose
   -> npm install body-parser @types/body-parser
+  -> npm install express-validator @types/express-validator

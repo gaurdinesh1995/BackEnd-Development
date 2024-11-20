@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../controllers/UserController";
+import { UserValidator } from "../validators/UserValidator";
 
 class UserRouter {
   public router: Router;
@@ -12,9 +13,11 @@ class UserRouter {
     this.deleteRoutes();
   }
   getRoutes() {
-    this.router.get("/login",UserController.login)
+  
   }
-  postRoutes() {}
+  postRoutes() {
+    this.router.post("/login",UserValidator.login(), UserController.login)
+  }
   patchRoutes() {}
   deleteRoutes() {}
 }
