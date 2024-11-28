@@ -17,3 +17,6 @@ mongodb+srv://dinesh01:<db_password>@nodejs.7vg1f.mongodb.net/
   -> npm install mongoose @types/mongoose
   -> npm install body-parser @types/body-parser
   -> npm install express-validator @types/express-validator
+  -> npm install nodemailer @types/nodemailer
+  -> npm install nodemailer-sendgrid-transport
+  -> npm install bcrypt @types/bcrypt
