@@ -18,7 +18,7 @@ export class GlobalMiddleWare {
     const authHeader = req.headers.authorization;
     const token = authHeader ? authHeader.slice(7, authHeader.length) : null;
     try {
-      req.errorStatus = 400;
+      req.errorStatus = 401;
       Jwt.verify(
         token,
         getEnvironmentVariables().jwt_secret,

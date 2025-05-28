@@ -14,35 +14,19 @@ class UserRouter {
     this.deleteRoutes();
   }
   getRoutes() {
-    this.router.get(
-      "/send/verification/email",
-      UserValidator.resendVerificationEmail(),
-      GlobalMiddleWare.checkError,
-      UserController.resendVerificationEmail
-    );
-    this.router.get(
-      "/login",
-      UserValidator.login(),
-      GlobalMiddleWare.checkError,
-      UserController.login
-    );
+    this.router.get("/send/verification/email",GlobalMiddleWare.authenticate,UserController.resendVerificationEmail );
+    this.router.get("/login",UserValidator.login(),GlobalMiddleWare.checkError,UserController.login);
+    this.router.get("/reset/passwordEmail",UserValidator.sendResetPasswordEmail(),GlobalMiddleWare.checkError,UserController.sendResetPasswordEmail);
+    this.router.get("/verify/resetPasswordToken",UserValidator.verifyResetPasswordToken(),GlobalMiddleWare.checkError,UserController.verifyResetPasswordToken)
   }
   postRoutes() {
-    this.router.post(
-      "/signup",
-      UserValidator.signUp(),
-      GlobalMiddleWare.checkError,
-      UserController.signUp
-    );
+    this.router.post("/signup",UserValidator.signUp(),GlobalMiddleWare.checkError,UserController.signUp);
   }
   patchRoutes() {
-    this.router.patch(
-      "/verify",
-      UserValidator.verifyUser(),
-      GlobalMiddleWare.checkError,
-      UserController.verify
-    );
+    this.router.patch("/verify",UserValidator.verifyUser(),GlobalMiddleWare.checkError,UserController.verify);
+    this.router.patch("/update/password",UserValidator.updatePassword(),GlobalMiddleWare.checkError,GlobalMiddleWare.authenticate,UserController.updatePassword);
+     this.router.patch('/reset/password', UserValidator.resetPassword(), GlobalMiddleWare.checkError, UserController.resetPassword);
   }
-  deleteRoutes() {}
+  deleteRoutes() { }
 }
 export default new UserRouter().router;
