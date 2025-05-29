@@ -4,9 +4,10 @@ export class CommentController {
   static async addComment(req, res, next) {
     const content = req.body.content;
     const post = req.post;
-
+    const userId = req.user.user_id;
     try {
       const comment = new Comments({
+        user_id: userId,
         content: content,
         created_at: new Date(),
         updated_at: new Date(),
