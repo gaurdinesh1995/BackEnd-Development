@@ -20,3 +20,4 @@ mongodb+srv://dinesh01:<db_password>@nodejs.7vg1f.mongodb.net/
   -> npm install nodemailer @types/nodemailer
   -> npm install nodemailer-sendgrid-transport
   -> npm install bcrypt @types/bcrypt
+  -> npm install multer @types/multer --save
