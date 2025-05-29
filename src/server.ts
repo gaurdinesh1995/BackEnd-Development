@@ -38,27 +38,27 @@ export class Server {
       });
     });
   }
-  // handleErrors() {
-  //   this.app.use((error, req, res, next) => {
-  //     const errorStatus = req.errorStatus || 500;
-  //     res.status(errorStatus).json({
-  //       message: error.message || "Something went wrong. Please try again",
-  //       staus_code: errorStatus,
-  //     });
-  //   });
-  // }
   handleErrors() {
-  this.app.use((error, req, res, next) => {
-    if (res.headersSent) {
-      return next(error); // Prevent sending headers again
-    }
-
-    const errorStatus = req.errorStatus || 500;
-    res.status(errorStatus).json({
-      message: error.message || "Something went wrong. Please try again",
-      status_code: errorStatus,
+    this.app.use((error, req, res, next) => {
+      const errorStatus = req.errorStatus || 500;
+      res.status(errorStatus).json({
+        message: error.message || "Something went wrong. Please try again",
+        staus_code: errorStatus,
+      });
     });
-  });
-}
+  }
+//   handleErrors() {
+//   this.app.use((error, req, res, next) => {
+//     if (res.headersSent) {
+//       return next(error); // Prevent sending headers again
+//     }
+
+//     const errorStatus = req.errorStatus || 500;
+//     res.status(errorStatus).json({
+//       message: error.message || "Something went wrong. Please try again",
+//       status_code: errorStatus,
+//     });
+//   });
+// }
 
 }

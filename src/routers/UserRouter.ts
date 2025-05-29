@@ -25,7 +25,7 @@ class UserRouter {
   patchRoutes() {
     this.router.patch("/verify",UserValidator.verifyUser(),GlobalMiddleWare.checkError,UserController.verify);
     this.router.patch("/update/password",UserValidator.updatePassword(),GlobalMiddleWare.checkError,GlobalMiddleWare.authenticate,UserController.updatePassword);
-     this.router.patch('/reset/password', UserValidator.resetPassword(), GlobalMiddleWare.checkError, UserController.resetPassword);
+    this.router.patch('/reset/password', UserValidator.resetPassword(), GlobalMiddleWare.checkError, UserController.resetPassword);
   }
   deleteRoutes() { }
 }
