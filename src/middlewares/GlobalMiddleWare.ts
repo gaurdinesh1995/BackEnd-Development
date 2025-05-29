@@ -27,8 +27,8 @@ export class GlobalMiddleWare {
           } else if (!decoded) {
             next(new Error("User not authorized"));
           } else {
-            req.user=decoded;
-            next()
+            req.user = decoded;
+            next();
           }
         }
       );

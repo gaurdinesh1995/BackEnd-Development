@@ -1,15 +1,15 @@
 import * as Bcrypt from "bcrypt";
 import * as Multer from "multer";
-import * as path from 'path';
+import * as path from "path";
 
 const storageOptions = Multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./uploads");
   },
-  filename:function(req,file,cb){
+  filename: function (req, file, cb) {
     const ext = path.extname(file.originalname); // e.g. .jpeg
-  cb(null, Date.now() + ext);
-  }
+    cb(null, Date.now() + ext);
+  },
 });
 
 export class Utils {
