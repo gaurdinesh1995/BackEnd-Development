@@ -1,4 +1,3 @@
-import Posts from "../models/Posts";
 import Comments from "../models/Comments";
 
 export class CommentController {
