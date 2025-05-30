@@ -13,7 +13,11 @@ class PostRouter {
     this.deleteRoutes();
   }
 
-  getRoutes() {}
+  getRoutes() {
+    this.router.get("/me",GlobalMiddleWare.authenticate,PostController.getPostByUser)
+    this.router.get("/all",GlobalMiddleWare.authenticate,PostController.getAllPosts)
+    this.router.get('/:id',GlobalMiddleWare.authenticate,PostValidators.getPostById(),GlobalMiddleWare.checkError,PostController.getPostById)
+  }
   postRoutes() {
     this.router.post("/add",GlobalMiddleWare.authenticate,PostValidators.addPost(),GlobalMiddleWare.checkError,PostController.addPost)
   }
